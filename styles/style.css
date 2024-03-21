@@ -1,4 +1,4 @@
-header {
+.header {
   display: grid;
   width: 1052px;
   grid-template-columns: repeat(7, 1fr);
@@ -53,28 +53,31 @@ header {
 
 .cover {
   position: relative;
-  height: 755px;
   font-size: 100px;
   font-weight: 700;
   text-transform: uppercase;
   color: rgb(255, 255, 255);
   margin-top: 92px;
+  padding: 0 20px 50px 50px;
   background-image: url(../images/cover.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  z-index: -1;
 }
 
 .overlay {
-  position: relative;
+  position: absolute;
+  width: 100%;
   height: 100%;
   background: rgb(0, 0, 0, 0.6);
+  inset: 0;
+  z-index: -1;
 }
 
 .cover__title {
   font-size: 100px;
   padding-top: 165px;
-  padding-left: 50px;
 }
 
 .aligned-text {
@@ -89,24 +92,22 @@ header {
   display: block;
   text-align: center;
   letter-spacing: 0.3em;
-  margin-top: 9px;
-  margin-right: 79px;
+  line-height: 138px;
 }
 
 .letter-spacing-center {
-  padding-left: 28px;
+  padding: 0 59px 0 31px;
 }
 
 .aligned-text_right {
   display: block;
   text-align: end;
   letter-spacing: 0.3em;
-  padding-top: 3px;
-  margin-right: 20px;
+  line-height: 100px;
 }
 
 .letter-spacing-right {
-  margin-left: 29px;
+  padding-left: 29px;
 }
 
 .cover__description {
@@ -115,30 +116,28 @@ header {
   font-size: 22px;
   font-weight: 400;
   color: rgb(255, 255, 255);
-  margin: 127px 0 0 76px;
+  margin: 136px 0 0 26px;
 }
 
 .cover__description-text {
   word-spacing: 19px;
-  padding-top: 13px;
-  padding-left: 2px;
+  padding-top: 12px;
 }
 
 .bet-button {
   width: 256px;
-  height: 51px;
   font-family: Raleway, sans-serif;
   font-size: 22px;
   color: rgb(255, 255, 255);
   text-transform: uppercase;
   background: none;
   border: 1px solid rgb(255, 255, 255);
-  margin-right: 50px;
+  margin-right: 30px;
+  padding: 10px 0 13px 0;
   cursor: pointer;
 }
 
 .lots {
-  
   margin: 180px 24px 0;
 }
 
@@ -156,6 +155,7 @@ header {
 .lots__card-list {
   display: flex;
   flex-grow: 1;
+  flex-wrap: wrap;
   justify-content: space-between;
   list-style-type: none;
 }
@@ -185,15 +185,11 @@ header {
   display: flex;
   width: 334px;
   height: 563px;
+  position: relative;
   flex-wrap: wrap;
   background-size: cover;
   background-position: center;
-}
-
-.card_align {
-height: 100%;
-display: flex;
-flex-wrap: wrap; 
+  z-index: -1;
 }
 
 .card_type_film {
@@ -213,7 +209,7 @@ flex-wrap: wrap;
   font-size: 20px;
   color: black;
   text-underline-offset: 4px;
-  margin: 31px 0 0 40px;
+  margin: 30px 0 0 40px;
 }
 
 .about {
@@ -224,7 +220,6 @@ flex-wrap: wrap;
 .about__column {
   display: flex;
   width: 1052px;
-  height: 595px;
 }
 
 .about__logo {
@@ -245,7 +240,7 @@ flex-wrap: wrap;
   width: 693px;
   font-size: 20px;
   font-weight: 400;
-  margin: 135px 0 0px 68px;
+  margin: 133px 0 0px 68px;
   padding-left: 5px;
 }
 
@@ -264,7 +259,7 @@ flex-wrap: wrap;
   display: grid;
   grid-template-columns: 1fr 149px 1fr;
   width: 1000px;
-  margin: 179px 50px 88px;
+  margin: 181px 50px 88px;
 }
 
 .footer__address {
@@ -275,6 +270,7 @@ flex-wrap: wrap;
   padding-left: 1px;
 
 }
+
 .footer__menu {
   font-size: 18px;
   text-underline-offset: 5px;
@@ -294,10 +290,6 @@ flex-wrap: wrap;
   text-decoration: none;
 }
 
-.footer__social {
-  margin-left: 185px;
-}
-
 .footer__social-icon {
   width: 48px;
   height: 48px;
@@ -305,6 +297,7 @@ flex-wrap: wrap;
 
 .footer__social-list {
   display: flex;
-  justify-content: space-between;
+  justify-content: end;
+  gap: 48px;
   list-style: none;
 }
