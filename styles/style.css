@@ -63,7 +63,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  z-index: -1;
+  z-index: 1;
 }
 
 .overlay {
@@ -158,6 +158,12 @@
   flex-wrap: wrap;
   justify-content: space-between;
   list-style-type: none;
+}
+
+.lots__card-list-item {
+  width: 350px;
+  min-height: 450px;
+  flex-grow: 1;
 }
 
 .card-link {
@@ -268,7 +274,6 @@
   line-height: 135%;
   text-underline-offset: 4px;
   padding-left: 1px;
-
 }
 
 .footer__menu {
