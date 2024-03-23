@@ -158,10 +158,11 @@
   flex-wrap: wrap;
   justify-content: space-between;
   list-style-type: none;
+  gap: 25px;
 }
 
 .lots__card-list-item {
-  width: 350px;
+  width: 334px;
   min-height: 450px;
   flex-grow: 1;
 }
@@ -189,7 +190,6 @@
 
 .card_list {
   display: flex;
-  width: 334px;
   height: 563px;
   position: relative;
   flex-wrap: wrap;
